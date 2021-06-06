@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <TextBlock  Foreground="White" Text="График дежурств в группе 642" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="No"/>
+        <Grid Background="#001e6f" Panel.ZIndex="-2"/>
+        <Grid Grid.Row="2" Background="#001e6f"></Grid>
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"></Frame>
+        <Button Background="#4f666a" Content="Назад" Name="btnBack" Width="175" Height="30" Visibility="Hidden" HorizontalAlignment="Right" Margin="5" Click="btnBack_Click"></Button>
+        <Button Background="#4f666a" Content="Выйти"  Name="btnExit" Width="175" Height="30" HorizontalAlignment="Right" Grid.Row="2" Click="btnExit_Click" VerticalAlignment="Bottom" Margin="0 0 5 5"/>
+        <Button Background="#4f666a" Content="Регистрация студента"  Name="btnRegis" Width="175" Height="30" HorizontalAlignment="Left" Grid.Row="2" Click="btnRegis_Click" VerticalAlignment="Bottom" Margin="5 0 10 5"/>
+        <Button Background="#4f666a" Content="Информация студентов"  Name="btnInfo" Width="175" Height="30" HorizontalAlignment="Left" Grid.Row="2" Click="btnInfo_Click" VerticalAlignment="Top" Margin="5 2.5 0 0"/>
+        <Button Background="#4f666a" Content="История входа" Name="btnVhod" Width="175" Height="30" HorizontalAlignment="Right" Grid.Row="2" Click="btnVhod_Click" VerticalContentAlignment="Top" Margin="0 0 5 40"  />
+    </Grid>
+</Window>
